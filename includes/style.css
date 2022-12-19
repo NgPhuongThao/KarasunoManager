@@ -1,0 +1,182 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open sans';
+}
+
+:root {
+    --white: rgb(255,244,232);
+    --beige: rgb(215,202,187);
+    --orange: rgb(255,138,0);
+    --brown: rgb(86,80,73);
+    --black: rgb(40,40,40);
+}
+
+body {
+    background-color: var(--black);
+}
+
+/*NAVIGATION*/
+header {
+    width: 60%;
+    margin: 0 auto;
+    top: 0px;
+    background-color: var(--orange);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+header ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header a {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bolder;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+header a:hover {
+    color: var(--white);
+}
+
+/*BOUTONS*/
+.buttons {
+    text-align: center;
+}
+
+.buttons input {
+    padding: 5px;
+    margin: 20px 50px;
+    border-radius: 10px;
+    padding-left: 25px;
+    border-style: none;
+    font-weight: bolder;
+    color: var(--black);
+    background-color: var(--beige);
+}
+
+.buttons input:hover {
+    color: var(--beige);
+    background-color: var(--brown);
+}
+
+/*PAGE CONNEXION*/
+.connexion {
+    width: 550px;
+    height: 600px;
+    text-align: center;
+    margin : auto;
+    background-color: var(--orange);
+    margin-top: 150px;
+    border-radius: 20px;
+}
+
+.connexion h1 {
+    padding-top: 125px;
+    font-size: 40px;
+    color: var(--black);
+}
+
+.connexion input {
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    padding-left: 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#username {
+    margin-top: 80px;
+    margin-bottom: 25px;
+}
+
+#password {
+    margin-top: 25px;
+    margin-bottom: 70px;
+}
+
+#submit {
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    color: var(--black);
+    background-color: var(--beige);
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+#submit:hover {
+    color: var(--beige);
+    background-color: var(--brown);
+}
+
+/*PAGES GESTION*/
+.gestion {
+    margin: 0 20%;
+}
+
+.gestion h1 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: var(--white);
+}
+
+.gestion table {
+    color: var(--orange);
+}
+
+.gestion .buttons input {
+    width: 250px;
+    height: 40px;
+}
+
+/*PAGES MODIFS*/
+.modification h1 {
+    color: var(--orange);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.modification form {
+    color: var(--white);
+    text-align: center;
+}
+
+.modification label {
+    float: left;
+    text-align: left;
+    margin-left: 10%;
+    width: 40%;
+}
+
+.modification input {
+    margin: 10px auto;
+    margin-right: 10%;
+    width: 30%;
+}
+/*wtf*/ 
+.modification input .buttons {
+    width: 100px;
+    height: 40px;
+}

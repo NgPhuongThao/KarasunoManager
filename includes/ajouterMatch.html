@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Ajouter un match</h1>
-    <form action="ajouterMatch.php" method="post">
-        Date : <input type="date" name="dateMatch"><br/>
-        Heure : <input type="time" name="heureMatch"><br/>
-        Nom équipe adverse : <input type="text" name="equipeadverseMatch"><br/>
-        Lieu de rencontre : <input type="text" name="lieurencontreMatch"><br/>
-        Résultat : <input type="number" name="resultatMatch"><br/>
-        <input type="submit" value="Valider">
-        <input type="reset" value="Annuler">
-    </form>
+    <div class="modification">
+        <h1>Ajouter un match</h1>
+        <form action="ajouterMatch.php" method="post">
+            <label>Date : </label><input type="date" name="dateMatch"><br/>
+            <label>Heure : </label><input type="time" name="heureMatch"><br/>
+            <label>Nom équipe adverse : </label><input type="text" name="equipeadverseMatch"><br/>
+            <label>Lieu de rencontre : </label><input type="text" name="lieurencontreMatch"><br/>
+            <label>Résultat : </label><input type="number" name="resultatMatch"><br/>
+            <div class="buttons">
+                <input type="submit" value="Valider">
+                <input type="reset" value="Annuler">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
