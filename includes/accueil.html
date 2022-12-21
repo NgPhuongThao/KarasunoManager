@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Accueil</title>
 </head>
 <body>
-    <form action="pageaccueil.php" method="get">
+    <form action="../php/connexion.php" method="post">
         <div class="connexion">
             <h1>Connexion</h1>
-            <input type="text" id="username" name="nom_saisi" placeholder="Enter Username"><br/>
-            <input type="text" id="password" name="nom_saisi" placeholder="Enter Password"><br/>
-            <input type="submit" id="submit" value="Log in">
+            <input type="text" id="username" name="identifiant" placeholder="Entrez votre identifiant"><br/>
+            <input type="text" id="password" name="mdp" placeholder="Entrez votre mot de passe"><br/>
+            <input type="submit" id="submit" value="Se connecter">
         </div>
     </form>
 </body>
