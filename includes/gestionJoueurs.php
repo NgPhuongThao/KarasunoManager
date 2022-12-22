@@ -31,6 +31,7 @@
                     <th>Poste préféré</th>
                     <th>Statut</th>
                 </tr>
+                <?php include('../php/joueurs.php'); ?>
             </table>
             
             <div class="buttons">
