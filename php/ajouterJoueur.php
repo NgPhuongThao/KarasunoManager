@@ -19,6 +19,10 @@
             // TRAITEMENT DE L'IMAGE //
             if (!empty($_FILES['photo']['name'])) {
                 $nomFichier = basename($_FILES['photo']['name']);
+                // Tant que le fichier existe, ajouter bis 
+                while (file_exists($nomFichier)) {
+                    
+                }
                 $cheminFichierCible = $repoCible . $nomFichier;
                 $extensionFichier = strtolower(pathinfo($cheminFichierCible, PATHINFO_EXTENSION));
             

@@ -31,7 +31,9 @@
                     '&commentaire='.$row['Commentaire'].
                     '&statut='.$row['Statut'].'">
                 Modifier</a>
-                <a href="supprimerJoueur.php?numLicence='.$row['NumLicence'].'" 
+                <a href="../php/supprimerJoueur.php?
+                    numLicence='.$row['NumLicence'].'
+                    &photo='.$row['Photo'].'" 
                 onclick="return confirm(\'Are you sure?\');">Supprimer</a>
             </td>
             </tr>';

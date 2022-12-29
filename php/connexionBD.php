@@ -15,4 +15,8 @@
     function deconnexion($linkpdo){
         $linkpdo = null;
     }
+
+    function hachage($string){
+            
+    }
 ?>

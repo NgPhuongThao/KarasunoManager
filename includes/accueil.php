@@ -13,6 +13,11 @@
             <h1>Connexion</h1>
             <input type="text" id="username" name="identifiant" placeholder="Entrez votre identifiant"><br/>
             <input type="text" id="password" name="mdp" placeholder="Entrez votre mot de passe"><br/>
+            <?php
+                if (isset($_GET['erreur'])) {
+                    echo "L'identifiant ou le mot de passe est incorrect.</br>";
+                }
+            ?>
             <input type="submit" id="submit" name="seConnecter" value="Se connecter">
         </div>
     </form>

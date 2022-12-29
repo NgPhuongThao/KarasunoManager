@@ -14,17 +14,14 @@
     $res->execute(array($_POST["identifiant"]));
     if ($res->rowCount()!=0){
         foreach ($res as $row){
-            if ($row['MotDePasse'] == $mdp){
+            if ($row['MotDePasse'] == hash('ripemd160',$mdp)){
                 header("Location: ../includes/gestionJoueurs.php");
             } else{
-                include("../includes/accueil.html");
-                echo "L'identifiant ou le mot de passe est incorrect.";
+                header("Location: ../includes/accueil.php?erreur=true");
             }
         }
     } else {
-        include("../includes/accueil.html");
-        echo "L'identifiant ou le mot de passe est incorrect.";
+        header("Location: ../includes/accueil.php?erreur=true");
     }
-
     deconnexion($linkpdo);
 ?>
