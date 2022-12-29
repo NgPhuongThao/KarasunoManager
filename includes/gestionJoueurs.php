@@ -30,6 +30,7 @@
                     <th>Poids</th>
                     <th>Poste préféré</th>
                     <th>Statut</th>
+                    <th>Action</th>
                 </tr>
                 <?php include('../php/joueurs.php'); ?>
             </table>

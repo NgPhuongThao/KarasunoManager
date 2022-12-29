@@ -9,9 +9,12 @@
         $dateNaissance = date("Y-m-d",strtotime($_POST['dateNaissance']));
         $repoCible = "../img/";
 
+        // Teste si le numéro de licence existe dans la BD
+        $linkpdo = connexion(); // Ouverture de connexion
         $req = 'SELECT * FROM JOUEUR WHERE NumLicence = ' . $numLicence;
         $res = $linkpdo->prepare($req);
         $res->execute();
+
         if ($res->rowCount()==0) {
             // TRAITEMENT DE L'IMAGE //
             if (!empty($_FILES['photo']['name'])) {
@@ -24,7 +27,6 @@
                 if (in_array($extensionFichier, $extensionsAutorisees)) {
                     // Ajout de l'image aux fichiers
                     if (move_uploaded_file($_FILES["photo"]["tmp_name"], $cheminFichierCible)) {
-                        $linkpdo = connexion(); // Ouverture de connexion
                         // Préparation de la requête
                         $req = "INSERT INTO JOUEUR (NumLicence, Nom, Prenom, Photo, DateNaissance, Taille, Poids, PostePrefere, Commentaire, Statut) 
                         VALUES (?,?,?,?,?,?,?,?,?,?)";
@@ -39,6 +41,7 @@
                 }
             }
         }
+        echo "Une erreur s'est produite. Veuillez vérifier les informations saisies.";
     }else {
         include('../includes/ajouterJoueur.html');
     }

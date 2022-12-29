@@ -17,11 +17,13 @@
             if ($row['MotDePasse'] == $mdp){
                 header("Location: ../includes/gestionJoueurs.php");
             } else{
-                header("Location: ../includes/accueil.html");
+                include("../includes/accueil.html");
+                echo "L'identifiant ou le mot de passe est incorrect.";
             }
         }
     } else {
-        header("Location: ../includes/accueil.html");
+        include("../includes/accueil.html");
+        echo "L'identifiant ou le mot de passe est incorrect.";
     }
 
     deconnexion($linkpdo);
