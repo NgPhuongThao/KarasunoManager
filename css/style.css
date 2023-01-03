@@ -60,11 +60,16 @@ header a:hover {
 table{
     border-collapse: collapse;
     margin : auto;
+    text-align: center;
 }
 
 th, td{
     border: 1px solid var(--white);
     padding: 10px 20px;
+}
+
+.action {
+    padding: 10px 70px;
 }
 
 /*BOUTONS*/
@@ -84,6 +89,21 @@ th, td{
 }
 
 .buttons input:hover {
+    color: var(--beige);
+    background-color: var(--brown);
+}
+
+.btnTable {
+    text-align: center;
+    padding: 4px 10px;
+    margin : auto 3px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: var(--black);
+    background-color: var(--beige);
+}
+
+.btnTable:hover {
     color: var(--beige);
     background-color: var(--brown);
 }
