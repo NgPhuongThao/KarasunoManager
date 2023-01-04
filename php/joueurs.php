@@ -19,9 +19,7 @@
             <td>' . $row['PostePrefere'] . '</td>
             <td>' . $row['Statut'] . '</td>
             <td>
-                <a class="btnTable"
-                    href="../includes/modifierJoueur.php?
-                    numLicence='.$row['NumLicence'].
+                <a href="../includes/modifierJoueur.php?numLicence='.$row['NumLicence'].
                     '&nom='.$row['Nom'].
                     '&prenom='.$row['Prenom'].
                     '&photo='.$row['Photo'].
@@ -30,12 +28,10 @@
                     '&poids='.$row['Poids'].
                     '&postePrefere='.$row['PostePrefere'].
                     '&commentaire='.$row['Commentaire'].
-                    '&statut='.$row['Statut'].'">Modifier</a>
+                    '&statut='.$row['Statut'].'" class="btnTable">Modifier</a>
                 
-                <a class="btnTable"
-                    href="../php/supprimerJoueur.php?
-                    numLicence='.$row['NumLicence'].'
-                    &photo='.$row['Photo'].'" 
+                <a href="../php/supprimerJoueur.php?numLicence='.$row['NumLicence'].'
+                    &photo='.$row['Photo'].'" class="btnTable"
                 onclick="return confirm(\'Are you sure?\');">Supprimer</a>
             </td>
             </tr>';
