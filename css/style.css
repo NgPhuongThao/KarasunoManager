@@ -96,11 +96,12 @@ th, td{
 .btnTable {
     text-align: center;
     padding: 4px 10px;
-    margin : auto 3px;
+    margin : auto 10px;
     border-radius: 10px;
     font-weight: bolder;
     color: var(--black);
     background-color: var(--beige);
+    text-decoration: none!important;
 }
 
 .btnTable:hover {

@@ -19,7 +19,7 @@
             <td>' . $row['PostePrefere'] . '</td>
             <td>' . $row['Statut'] . '</td>
             <td>
-                <input type="submit" class="btnTable" value="Modifier" 
+                <a class="btnTable"
                     href="../includes/modifierJoueur.php?
                     numLicence='.$row['NumLicence'].
                     '&nom='.$row['Nom'].
@@ -30,13 +30,13 @@
                     '&poids='.$row['Poids'].
                     '&postePrefere='.$row['PostePrefere'].
                     '&commentaire='.$row['Commentaire'].
-                    '&statut='.$row['Statut'].'">
+                    '&statut='.$row['Statut'].'">Modifier</a>
                 
-                <input type="submit" class="btnTable" value="Supprimer" 
+                <a class="btnTable"
                     href="../php/supprimerJoueur.php?
                     numLicence='.$row['NumLicence'].'
                     &photo='.$row['Photo'].'" 
-                onclick="return confirm(\'Are you sure?\');">
+                onclick="return confirm(\'Are you sure?\');">Supprimer</a>
             </td>
             </tr>';
         }
