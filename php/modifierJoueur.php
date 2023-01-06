@@ -71,6 +71,7 @@
             }
         }
         deconnexion($linkpdo); // Déconnexion
+        header("Location: ../includes/gestionJoueurs.php");
     } else{
         include("../includes/modifierJoueur.php");
     }

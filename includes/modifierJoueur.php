@@ -28,7 +28,7 @@
             <label>Statut : </label>
             <input type="text" name="statut" value="<?php echo $_GET['statut'];?>"><br/>
             <label>Commentaire : </label>
-            <input type="text" name="commentaire" value="<?php echo $_GET['commentaire'];?>" required><br/>
+            <input type="text" name="commentaire" value="<?php echo $_GET['commentaire'];?>"><br/>
             <label>Photo : </label>
             <input hidden type="text" name="anciennePhoto" value="<?php echo $_GET['photo'];?>">
             <img src="<?php echo $_GET['photo'];?>">
