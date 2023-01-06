@@ -19,10 +19,16 @@
             // TRAITEMENT DE L'IMAGE //
             if (!empty($_FILES['photo']['name'])) {
                 $nomFichier = basename($_FILES['photo']['name']);
-                // Tant que le fichier existe, ajouter bis 
+
+                /* // Tant que le fichier existe, ajouter bis 
                 while (file_exists($nomFichier)) {
-                    
-                }
+                    // DIVISE LE NOM DU FICHIER
+                    $nomFichier = substr($nomFichier, 0, strrpos($nomFichier, ".")); //Récupère le nom du fichier sans l'extension
+                    $extensionFichier = substr($nomFichier, 1, strrpos($nomFichier, ".")); //Récupère l'extension du fichier sans l'extension 
+    
+                    $nomFichier .= 'bis'.$extensionFichier;
+                } */
+
                 $cheminFichierCible = $repoCible . $nomFichier;
                 $extensionFichier = strtolower(pathinfo($cheminFichierCible, PATHINFO_EXTENSION));
             
