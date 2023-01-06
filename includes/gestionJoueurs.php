@@ -11,10 +11,10 @@
 <body>
     <header>
         <ul>
-            <li><a href="gestionJoueurs.html">Gestion des joueurs</a></li>
-            <li><a href="gestionMatchs.html">Gestion des matchs</a></li>
+            <li><a href="gestionJoueurs.php">Gestion des joueurs</a></li>
+            <li><a href="gestionMatchs.php">Gestion des matchs</a></li>
             <li><a href="#">Feuilles de matchs</a></li>
-            <li><a href="#">Statistiques</a></li>
+            <li><a href="stats.php">Statistiques</a></li>
         </ul>
     </header>
     <main>
@@ -31,7 +31,7 @@
                     <th>Poids</th>
                     <th>Poste préféré</th>
                     <th>Statut</th>
-                    <th class="action">Action</th>
+                    <th>Action</th>
                 </tr>
                 <?php include('../php/joueurs.php'); ?>
             </table>
