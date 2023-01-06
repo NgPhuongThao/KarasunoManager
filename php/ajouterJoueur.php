@@ -21,7 +21,7 @@
                 $nomFichier = basename($_FILES['photo']['name']);
 
                 /* // Tant que le fichier existe, ajouter bis 
-                while (file_exists($nomFichier)) {
+                while (file_exists($repoCible . $nomFichier)) {
                     // DIVISE LE NOM DU FICHIER
                     $nomFichier = substr($nomFichier, 0, strrpos($nomFichier, ".")); //Récupère le nom du fichier sans l'extension
                     $extensionFichier = substr($nomFichier, 1, strrpos($nomFichier, ".")); //Récupère l'extension du fichier sans l'extension 

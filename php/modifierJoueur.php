@@ -31,24 +31,21 @@
                             $_POST['numLicence']));
 
         // TRAITEMENT DE L'IMAGE //
-        echo $_FILES['nouvellePhoto']['name'];
         if (!empty($_FILES['nouvellePhoto']['name'])) {
             // SUPPRIME L'ANCIENNE PHOTO
             if (file_exists($_POST['anciennePhoto'])) {
                 unlink($_POST['anciennePhoto']);
             }
 
+            $repoCible = "../img/";
             $nomFichier = basename($_FILES['nouvellePhoto']['name']);
             // Tant que le fichier existe, ajouter bis
-            /* while (file_exists($nomFichier)) {
+            while (file_exists($repoCible . $nomFichier)) {
                 // DIVISE LE NOM DU FICHIER
-                $nomFichier = substr($nomFichier, 0, strrpos($nomFichier, ".")); //Récupère le nom du fichier sans l'extension
-                $extensionFichier = substr($nomFichier, 1, strrpos($nomFichier, ".")); //Récupère l'extension du fichier sans l'extension 
+                $nomFichier_extension = explode(".",$nomFichier);
+                $nomFichier = $nomFichier_extension[0] . "bis." . strtolower($nomFichier_extension[1]);
+            }
 
-                $nomFichier .= 'bis'.$extensionFichier;
-            } */
-
-            $repoCible = "../img/";
             $cheminFichierCible = $repoCible . $nomFichier;
             $extensionFichier = strtolower(pathinfo($cheminFichierCible, PATHINFO_EXTENSION));
         
@@ -64,10 +61,10 @@
                     $res = $linkpdo->prepare($req);
                     // Exécution de la requête
                     $res->execute(array($cheminFichierCible,$_POST['numLicence']));
-                    
+
                     deconnexion($linkpdo); // Déconnexion
                     header("Location: ../includes/gestionJoueurs.php");
-                }
+                } 
             } else {
                 include("../includes/modifierJoueur.php");
                 echo "L'extension de votre fichier doit être .jpg, .png ou .jpeg.";
