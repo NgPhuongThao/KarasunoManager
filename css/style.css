@@ -68,36 +68,15 @@ th, td{
     padding: 10px 20px;
 }
 
-.action {
-    padding: 10px 70px;
-}
-
-a.btnTable:link, a.btnTable:visited  {
-    text-align: center;
-    padding: 4px 10px;
-    margin : auto 10px;
-    border-radius: 10px;
-    font-weight: bolder;
-    color: var(--black);
-    background-color: var(--beige);
-    text-decoration: none!important;
-}
-
-a.btnTable:hover {
-    color: var(--beige);
-    background-color: var(--brown);
-}
-
 /*BOUTONS*/
 .buttons {
-    text-align: center;
+    text-align: right;
 }
 
 .buttons input {
     padding: 5px;
-    margin: 20px 50px;
+    margin: 20px 10px;
     border-radius: 10px;
-    padding-left: 25px;
     border-style: none;
     font-weight: bolder;
     color: var(--black);
@@ -105,6 +84,28 @@ a.btnTable:hover {
 }
 
 .buttons input:hover {
+    color: var(--beige);
+    background-color: var(--brown);
+}
+
+.btnTable {
+    display:flex;
+}
+
+.btnTable a {
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 4px 5px;
+    margin : auto 5px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: var(--black);
+    background-color: var(--beige);
+    text-decoration: none;
+}
+
+a.btnTable:hover {
     color: var(--beige);
     background-color: var(--brown);
 }

@@ -19,6 +19,7 @@
             <td>' . $row['PostePrefere'] . '</td>
             <td>' . $row['Statut'] . '</td>
             <td>
+                <div class="btnTable">
                 <a href="../includes/modifierJoueur.php?numLicence='.$row['NumLicence'].
                     '&nom='.$row['Nom'].
                     '&prenom='.$row['Prenom'].
@@ -29,10 +30,11 @@
                     '&postePrefere='.$row['PostePrefere'].
                     '&commentaire='.$row['Commentaire'].
                     '&statut='.$row['Statut'].'" class="btnTable">Modifier</a>
-                
+
                 <a href="../php/supprimerJoueur.php?numLicence='.$row['NumLicence'].'
                     &photo='.$row['Photo'].'" class="btnTable"
                 onclick="return confirm(\'Are you sure?\');">Supprimer</a>
+                </div>
             </td>
             </tr>';
         }
