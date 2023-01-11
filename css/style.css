@@ -214,3 +214,7 @@ a.btnTable:hover {
     width: 100px;
     height: 40px;
 }
+
+p {
+    color: var(--white);
+}
