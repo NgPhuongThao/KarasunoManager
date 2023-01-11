@@ -10,7 +10,7 @@
 <body>
     <div class="modification">
         <h1>Modifier un joueur</h1>
-        <form action="../php/modifierJoueur.php" method="post">
+        <form action="../php/modifierJoueur.php" method="post" enctype="multipart/form-data">
             <label>Numéro de licence : </label>
             <input type="number" name="numLicence" value="<?php echo $_GET['numLicence'];?>" required><br/>
             <label>Nom : </label>
@@ -28,9 +28,11 @@
             <label>Statut : </label>
             <input type="text" name="statut" value="<?php echo $_GET['statut'];?>"><br/>
             <label>Commentaire : </label>
-            <input type="text" name="commentaire" value="<?php echo $_GET['commentaire'];?>" required><br/>
+            <input type="text" name="commentaire" value="<?php echo $_GET['commentaire'];?>"><br/>
             <label>Photo : </label>
+            <input hidden type="text" name="anciennePhoto" value="<?php echo $_GET['photo'];?>">
             <img src="<?php echo $_GET['photo'];?>">
+            <input type="file" name="nouvellePhoto">
 
             <div class="buttons">
                 <input type="submit" value="Valider" name="valider">
