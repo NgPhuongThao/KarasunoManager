@@ -18,16 +18,14 @@
         if ($res->rowCount()==0) {
             // TRAITEMENT DE L'IMAGE //
             if (!empty($_FILES['photo']['name'])) {
+                $repoCible = "../img/";
                 $nomFichier = basename($_FILES['photo']['name']);
-
-                /* // Tant que le fichier existe, ajouter bis 
+                // Tant que le fichier existe, ajouter bis
                 while (file_exists($repoCible . $nomFichier)) {
                     // DIVISE LE NOM DU FICHIER
-                    $nomFichier = substr($nomFichier, 0, strrpos($nomFichier, ".")); //Récupère le nom du fichier sans l'extension
-                    $extensionFichier = substr($nomFichier, 1, strrpos($nomFichier, ".")); //Récupère l'extension du fichier sans l'extension 
-    
-                    $nomFichier .= 'bis'.$extensionFichier;
-                } */
+                    $nomFichier_extension = explode(".",$nomFichier);
+                    $nomFichier = $nomFichier_extension[0] . "bis." . strtolower($nomFichier_extension[1]);
+                }
 
                 $cheminFichierCible = $repoCible . $nomFichier;
                 $extensionFichier = strtolower(pathinfo($cheminFichierCible, PATHINFO_EXTENSION));
