@@ -52,7 +52,6 @@
             // Extensions autorisées 
             $extensionsAutorisees = array('jpg', 'png', 'jpeg');
             if (in_array($extensionFichier, $extensionsAutorisees)) {
-
                 // Ajout de l'image aux fichiers
                 if (move_uploaded_file($_FILES["nouvellePhoto"]["tmp_name"], $cheminFichierCible)) {
 

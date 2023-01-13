@@ -10,22 +10,22 @@
     $res->execute(); 
     if ($res !== false) {
         foreach ($res as $row) {
-            echo '<tr><td>' . $row['Date'] . '</td>
+            echo '<tr><td>' . $row['DateMatch'] . '</td>
             <td>' . $row['Heure'] . '</td>
             <td>' . $row['NomAdversaire'] . '</td>
             <td>' . $row['LieuDeRencontre'] . '</td>
             <td>' . $row['Resultat'] . '</td>
             <td>
                 <div class="btnTable">
-                <a href="../includes/modifierMatch.php?dateMatch='.$row['Date'].
+                <a href="../includes/modifierMatch.php?dateMatch='.$row['DateMatch'].
                     '&heureMatch='.$row['Heure'].
                     '&nomAdversaire='.$row['NomAdversaire'].
                     '&lieuDeRencontre='.$row['LieuDeRencontre'].
                     '&resultatMatch='.$row['Resultat'].'" class="btnTable">Modifier</a>
 
-                <a href="../php/supprimerMatch.php?date='.$row['Date'].'
+                <a href="../php/supprimerMatch.php?date='.$row['DateMatch'].'
                     &nomAdversaire='.$row['NomAdversaire'].'" class="btnTable"
-                onclick="return confirm(\'Are you sure?\');">Supprimer</a>
+                onclick="return confirm(\'Êtes-vous sûr.e ?\');">Supprimer</a>
                 </div>
             </td>
             </tr>';

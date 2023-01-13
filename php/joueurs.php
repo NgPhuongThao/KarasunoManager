@@ -33,7 +33,7 @@
 
                 <a href="../php/supprimerJoueur.php?numLicence='.$row['NumLicence'].'
                     &photo='.$row['Photo'].'" class="btnTable"
-                onclick="return confirm(\'Are you sure?\');">Supprimer</a>
+                onclick="return confirm(\'Êtes-vous sûr.e ?\');">Supprimer</a>
                 </div>
             </td>
             </tr>';

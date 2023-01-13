@@ -11,16 +11,26 @@
     <div class="modification">
         <h1>Ajouter un joueur</h1>
         <form action="../php/ajouterJoueur.php" method="post" enctype="multipart/form-data">
-            <label>Numéro de licence : </label><input type="text" name="numLicence" required><br/>
-            <label>Nom : </label><input type="text" name="nom" required><br/>
-            <label>Prénom : </label><input type="text" name="prenom" required><br/>
-            <label>Date de naissance : </label><input type="date" name="dateNaissance" required><br/>
-            <label>Taille : </label><input type="number" name="taille" min="150" max="300" value="150" required><br/>
-            <label>Poids : </label><input type="number" name="poids" min="40" max="150" value="40" required><br/>
-            <label>Poste préféré : </label><input type="text" name="postePrefere" required><br/>
-            <label>Statut : </label><input type="text" name="statut" required><br/>
-            <label>Commentaires (optionnel) : </label><input type="textarea" name="commentaire"><br/>
-            <label>Photo : </label><input type="file" name="photo" required>
+            <label>Numéro de licence : </label>
+            <input type="text" name="numLicence" required><br/>
+            <label>Nom : </label>
+            <input type="text" name="nom" required><br/>
+            <label>Prénom : </label>
+            <input type="text" name="prenom" required><br/>
+            <label>Date de naissance : </label>
+            <input type="date" name="dateNaissance" required><br/>
+            <label>Taille : </label>
+            <input type="number" name="taille" min="150" max="300" value="150" required><br/>
+            <label>Poids : </label>
+            <input type="number" name="poids" min="40" max="150" value="40" required><br/>
+            <label>Poste préféré : </label>
+            <input type="text" name="postePrefere" required><br/>
+            <label>Statut : </label>
+            <input type="text" name="statut" required><br/>
+            <label>Commentaires (optionnel) : </label>
+            <input type="textarea" name="commentaire"><br/>
+            <label>Photo : </label>
+            <input type="file" name="photo" required>
             <div class="buttons">
                 <input type="submit" value="Valider" name="valider">
                 <input type="reset" value="Annuler">

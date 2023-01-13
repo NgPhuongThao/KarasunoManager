@@ -1,6 +1,5 @@
 <?php
     if (isset($_POST['valider'])) {
-        echo 'Valider';
         // IMPORTS //
         require_once('connexionBD.php');
 
@@ -35,6 +34,7 @@
                 if (in_array($extensionFichier, $extensionsAutorisees)) {
                     // Ajout de l'image aux fichiers
                     if (move_uploaded_file($_FILES["photo"]["tmp_name"], $cheminFichierCible)) {
+
                         // Préparation de la requête
                         $req = "INSERT INTO JOUEUR (NumLicence, Nom, Prenom, Photo, DateNaissance, Taille, Poids, PostePrefere, Commentaire, Statut) 
                         VALUES (?,?,?,?,?,?,?,?,?,?)";
@@ -43,8 +43,10 @@
                         $res->execute(array($numLicence,$_POST['nom'],$_POST['prenom'],$cheminFichierCible,
                         $dateNaissance,$_POST['taille'],$_POST['poids'],$_POST['postePrefere'],
                         $_POST['commentaire'],$_POST['statut']));
+
                         deconnexion($linkpdo); // Déconnexion
                         echo "<script>window.close();</script>"; // Fermeture de la fenêtre
+
                     }
                 }
             }
