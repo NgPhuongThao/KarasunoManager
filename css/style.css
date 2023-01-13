@@ -176,6 +176,12 @@ a.btnTable:hover {
     color: var(--white);
 }
 
+.gestion h3 {
+    color: var(--white);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
 .gestion table {
     color: var(--orange);
 }
@@ -183,6 +189,10 @@ a.btnTable:hover {
 .gestion .buttons input {
     width: 250px;
     height: 40px;
+}
+
+.gestion p {
+    color: var(--white);
 }
 
 /*PAGES MODIFS*/
@@ -213,8 +223,4 @@ a.btnTable:hover {
 .modification input .buttons {
     width: 100px;
     height: 40px;
-}
-
-p {
-    color: var(--white);
 }

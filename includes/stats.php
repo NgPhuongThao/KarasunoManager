@@ -17,9 +17,8 @@
         </ul>
     </header>
     <main>
-
         <div class="gestion">
-            <p>Sur (nombre de matchs) matchs :</p>
+            <h3>Sur (nombre de matchs) matchs :</h3>
             <?php echo "<img src='../php/graphe1.php' class='graphique'/>"; ?>
             <p> Bleu : gagné </p>
             <p> Rouge : perdu </p>
