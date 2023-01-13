@@ -20,6 +20,8 @@ $res1->execute();
 $res2 = $linkpdo->prepare($req2);
 $res2->execute();
 
+data = array();
+
 if (($res1 !== false) && ($res2 !== false)) {
     foreach ($res1 as $row1) {
         foreach ($res2 as $row2) {
