@@ -17,14 +17,14 @@
             <td>' . $row['Resultat'] . '</td>
             <td>
                 <div class="btnTable">
-                <a href="../includes/modifierMatch.php?dateMatch='.$row['DateMatch'].
+                <a href="../includes/modifierMatch.php?id='.$row['IdMatch'].
+                    '&dateMatch='.$row['DateMatch'].
                     '&heureMatch='.$row['Heure'].
                     '&nomAdversaire='.$row['NomAdversaire'].
                     '&lieuDeRencontre='.$row['LieuDeRencontre'].
                     '&resultatMatch='.$row['Resultat'].'" class="btnTable">Modifier</a>
 
-                <a href="../php/supprimerMatch.php?date='.$row['DateMatch'].'
-                    &nomAdversaire='.$row['NomAdversaire'].'" class="btnTable"
+                <a href="../php/supprimerMatch.php?id='.$row['IdMatch'].'" class="btnTable"
                 onclick="return confirm(\'Êtes-vous sûr.e ?\');">Supprimer</a>
                 </div>
             </td>

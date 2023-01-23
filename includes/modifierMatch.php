@@ -11,6 +11,7 @@
     <div class="modification">
         <h1>Modifier un match</h1>
         <form action="../php/modifierMatch.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
             <label>Date : </label>
             <input type="date" name="dateMatch" value="<?php echo $_GET['dateMatch'];?>" required><br/>
             <label>Heure : </label>
@@ -20,10 +21,10 @@
             <label>Lieu de rencontre : </label>
             <input type="text" name="lieuDeRencontre" value="<?php echo $_GET['lieuDeRencontre'];?>" required><br/>
             <label>Résultat : </label>
-            <input type="number" name="resultatMatch" value="<?php echo $_GET['resultatMatch'];?>" required><br/>
+            <input type="number" name="resultatMatch" value="<?php echo $_GET['resultatMatch'];?>"><br/>
 
             <div class="buttons">
-                <input type="submit" value="Valider">
+                <input type="submit" value="Valider" name="valider">
                 <input type="reset" value="Annuler">
             </div>
         </form>
