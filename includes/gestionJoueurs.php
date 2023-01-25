@@ -13,7 +13,7 @@
         <ul>
             <li><a href="gestionJoueurs.php">Gestion des joueurs</a></li>
             <li><a href="gestionMatchs.php">Gestion des matchs</a></li>
-            <li><a href="#">Feuilles de matchs</a></li>
+            <li><a href="feuillesMatchs.php">Feuilles de matchs</a></li>
             <li><a href="stats.php">Statistiques</a></li>
         </ul>
     </header>

@@ -18,23 +18,30 @@
     </header>
     <main>
         <div class="gestion">
-            <h1>Mes matchs</h1>
+            <h1>Feuilles de match</h1>
+
+            <label for="comboMatch">Matchs :</label>
+
+            <select name="matchs" id="comboMatch">
+                <option value="">--Choisissez un match--</option>
+            </select>
 
             <table>
                 <tr>
-                    <th>Date</th>
-                    <th>Heure</th>
-                    <th>Nom équipe adverse</th>
-                    <th>Lieu de rencontre</th>
-                    <th>Résultat</th>
-                    <th>Action</th>
+                    <th>Photo</th>
+                    <th>Taille</th>
+                    <th>Poids</th>
+                    <th>Poste préféré</th>
+                    <th>Commentaire</th>
+                    <!--<th>Evaluation</th>--> <!--Jsp où c'est trouvable-->
+                    <th>Titulaire</th>
+                    <th>Remplaçant</th>
                 </tr>
-                <?php include('../php/matchs.php'); ?>
+                <?php include('../php/feuilles.php'); ?>
             </table>
 
             <div class="buttons">
-                <input type="submit" value="Ajouter un match" onclick="window.open('ajouterMatch.html','wclose',
-                'width=700,height=800, toolbar=si, scroolbar=si, status=si,left=500,top=50');return false;">
+                <input type="submit" value="Valider" onclick=""> <!--Ajouter dans le onclick un moyen de dire que ça a bien été validé-->
             </div>
         </div>
     </main>

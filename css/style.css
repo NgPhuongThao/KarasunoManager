@@ -219,8 +219,15 @@ a.btnTable:hover {
     margin-right: 10%;
     width: 30%;
 }
-/*wtf*/ 
-.modification input .buttons {
-    width: 100px;
-    height: 40px;
+
+/*PAGE FEUILLES MATCHS*/
+
+#comboMatch {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+label {
+    color: var(--white);
+    font-size: large;
 }
