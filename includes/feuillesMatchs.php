@@ -44,7 +44,7 @@
                         <th>Poids</th>
                         <th>Poste préféré</th>
                         <th>Commentaire</th>
-                        <!--<th>Evaluation</th>-->
+                        <th>Evaluation</th>
                         <th>Titulaire</th>
                         <th>Remplaçant</th>
                     </tr>

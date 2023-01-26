@@ -51,8 +51,8 @@
             <td>' . $row['PostePrefere'] . '</td>
             <td>' . $res2->fetch(PDO::FETCH_ASSOC)['Titulaire'] . '</td>
             <td>' . $res3->fetch(PDO::FETCH_ASSOC)['Remplacant'] . '</td>
-            <td>' . $res4->fetch(PDO::FETCH_ASSOC)['Evaluations'] . '</td>
-            <td>' . $pourcentageMatchsGagnes . '</td>';  
+            <td>' . round($res4->fetch(PDO::FETCH_ASSOC)['Evaluations'],2) . '</td>
+            <td>' . round($pourcentageMatchsGagnes,2) . '</td>';  
 
         }
         echo '</tr>';
