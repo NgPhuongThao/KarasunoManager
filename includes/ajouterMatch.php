@@ -18,7 +18,7 @@
             <label>Nom équipe adverse : </label>
             <input type="text" name="equipeadverseMatch" required><br/>
             <label for="comboRencontre">Lieu de rencontre :</label>
-            <select name="lieuDeRencontre" id="comboRencontre" required>
+            <select name="lieurencontreMatch" id="comboRencontre" required>
             <option disabled selected>--Choisissez un lieu de rencontre--</option>
             <option>Domicile</option>
             <option>Extérieur</option>
