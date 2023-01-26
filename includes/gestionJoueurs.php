@@ -37,7 +37,7 @@
             </table>
             
             <div class="buttons">
-                <input type="submit" value="Ajouter un joueur" onclick="window.open('ajouterJoueur.html','wclose',
+                <input type="submit" value="Ajouter un joueur" onclick="window.open('ajouterJoueur.php','wclose',
                 'width=700,height=800, toolbar=si, scroolbar=si, status=si,left=500,top=50');return false;">
             </div>
         </div>

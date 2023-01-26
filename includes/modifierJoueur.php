@@ -23,12 +23,24 @@
             <input type="number" name="taille" value="<?php echo $_GET['taille'];?>" required><br/>
             <label>Poids : </label>
             <input type="number" name="poids" value="<?php echo $_GET['poids'];?>" required><br/>
-            <label>Poste préféré : </label>
-            <input type="text" name="postePrefere" value="<?php echo $_GET['postePrefere'];?>" required><br/>
-            <label>Statut : </label>
-            <input type="text" name="statut" value="<?php echo $_GET['statut'];?>"><br/>
-            <label>Commentaire : </label>
-            <input type="text" name="commentaire" value="<?php echo $_GET['commentaire'];?>"><br/>
+            <label for="comboPoste">Poste préféré :</label>
+            <select name="postePrefere" id="comboPoste" value="<?php echo $_GET['postePrefere'];?>" required>
+            <option disabled selected>--Choisissez un poste--</option>
+            <option>Attaquant</option>
+            <option>Central</option>
+            <option>Libéro</option>
+            <option>Passeur</option>
+            </select><br/>
+            <label for="comboStatut">Statut :</label>
+            <select name="statut" id="comboStatut" value="<?php echo $_GET['statut'];?>" required>
+            <option disabled selected>--Choisissez un statut--</option>
+            <option>Actif(ve)</option>
+            <option>Blessé(e)</option>
+            <option>Suspendu(e)</option>
+            <option>Absent(e)</option>
+            </select><br/>
+            <label for="commentaire">Commentaire : </label>
+            <textarea id="commantaire" name="commentaire" value="<?php echo $_GET['commentaire'];?>"></textarea><br/>
             <label>Photo : </label>
             <input hidden type="text" name="anciennePhoto" value="<?php echo $_GET['photo'];?>">
             <img src="<?php echo $_GET['photo'];?>">

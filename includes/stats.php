@@ -20,8 +20,7 @@
         <div class="gestion">
             <h3>Sur (nombre de matchs) matchs :</h3>
             <?php echo "<img src='../php/graphe1.php' class='graphique'/>"; ?>
-            <p> Bleu : gagné </p>
-            <p> Rouge : perdu </p>
+            <p> Bleu : gagné / Rouge : perdu / Gris : égalité </p>
 
             <table>
                 <tr>

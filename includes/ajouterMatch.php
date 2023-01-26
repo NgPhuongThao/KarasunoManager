@@ -17,10 +17,20 @@
             <input type="time" name="heureMatch" required><br/>
             <label>Nom équipe adverse : </label>
             <input type="text" name="equipeadverseMatch" required><br/>
-            <label>Lieu de rencontre : </label>
-            <input type="text" name="lieurencontreMatch" required><br/>
-            <label>Résultat : </label>
-            <input type="number" name="resultatMatch"><br/>
+            <label for="comboRencontre">Lieu de rencontre :</label>
+            <select name="lieuDeRencontre" id="comboRencontre" required>
+            <option disabled selected>--Choisissez un lieu de rencontre--</option>
+            <option>Domicile</option>
+            <option>Extérieur</option>
+            </select><br/>
+            <label for="comboResultat">Résultat : </label>
+            <select name="resultatMatch" id="comboResultat">
+                <option disabled selected>--Choisissez le résultat du match--</option>
+                <option>Gagné</option>
+                <option>Perdu</option>
+                <option>Egalité</option>
+            </select><br/>
+
             <div class="buttons">
                 <input type="submit" value="Valider" name = "valider">
                 <input type="reset" value="Annuler">

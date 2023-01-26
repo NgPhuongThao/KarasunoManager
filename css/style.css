@@ -193,6 +193,7 @@ a.btnTable:hover {
 
 .gestion p {
     color: var(--white);
+    margin-bottom: 20px;
 }
 
 /*PAGES MODIFS*/
@@ -215,6 +216,18 @@ a.btnTable:hover {
 }
 
 .modification input {
+    margin: 10px auto;
+    margin-right: 10%;
+    width: 30%;
+}
+
+.modification select {
+    margin: 10px auto;
+    margin-right: 10%;
+    width: 30%;
+}
+
+.modification textarea {
     margin: 10px auto;
     margin-right: 10%;
     width: 30%;

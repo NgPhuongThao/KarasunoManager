@@ -23,12 +23,24 @@
             <input type="number" name="taille" min="150" max="300" value="150" required><br/>
             <label>Poids : </label>
             <input type="number" name="poids" min="40" max="150" value="40" required><br/>
-            <label>Poste préféré : </label>
-            <input type="text" name="postePrefere" required><br/>
-            <label>Statut : </label>
-            <input type="text" name="statut" required><br/>
-            <label>Commentaires (optionnel) : </label>
-            <input type="textarea" name="commentaire"><br/>
+            <label for="comboPoste">Poste préféré :</label>
+            <select name="postePrefere" id="comboPoste" required>
+            <option disabled selected>--Choisissez un poste--</option>
+            <option>Attaquant</option>
+            <option>Central</option>
+            <option>Libéro</option>
+            <option>Passeur</option>
+            </select><br/>
+            <label for="comboStatut">Statut :</label>
+            <select name="statut" id="comboStatut" required>
+            <option disabled selected>--Choisissez un statut--</option>
+            <option>Actif(ve)</option>
+            <option>Blessé(e)</option>
+            <option>Suspendu(e)</option>
+            <option>Absent(e)</option>
+            </select><br/>
+            <label for="commentaire">Commentaire : </label>
+            <textarea id="commantaire" name="commentaire"></textarea><br/>
             <label>Photo : </label>
             <input type="file" name="photo" required>
             <div class="buttons">
