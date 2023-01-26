@@ -18,7 +18,7 @@
     </header>
     <main>
         <div class="gestion">
-            <h1>Feuilles de match</h1>
+            <h1>Feuilles de matchs</h1>
             <form action="../php/inscriptionJoueurMatch.php" method="post">
                 <label for="comboMatch">Matchs :</label>
 
