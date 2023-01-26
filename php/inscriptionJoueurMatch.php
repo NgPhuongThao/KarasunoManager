@@ -1,6 +1,6 @@
 <?php
     require_once("connexionBD.php");
-    include("../includes/feuillesMatchs.php");
+    header("Location: ../includes/feuillesMatchs.php");
     $linkpdo = connexion(); 
     if (isset($_POST["valider"]) && isset($_POST["matchs"])) {
         foreach ($_POST['titulaire'] as $selected) {
