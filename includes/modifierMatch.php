@@ -19,17 +19,17 @@
             <label>Nom équipe adverse : </label>
             <input type="text" name="nomAdversaire" value="<?php echo $_GET['nomAdversaire'];?>" required><br/>
             <label for="comboRencontre">Lieu de rencontre :</label>
-            <select name="lieuDeRencontre" id="comboRencontre" value="<?php echo $_GET['lieuDeRencontre'];?>" required>
-            <option disabled selected>--Choisissez un lieu de rencontre--</option>
-            <option>Domicile</option>
-            <option>Extérieur</option>
+            <select name="lieuDeRencontre" id="comboRencontre" required>
+                <option value="<?php echo $_GET['lieuDeRencontre'];?>" disabled selected><?php echo $_GET['lieuDeRencontre'];?></option>
+                <option>Domicile</option>
+                <option>Extérieur</option>
             </select><br/>
             <label for="comboResultat">Résultat : </label>
-            <select name="resultatMatch" id="comboResultat" value="<?php echo $_GET['resultatMatch'];?>">
-            <option disabled selected>--Choisissez le résultat du match--</option>
-            <option>Gagné</option>
-            <option>Perdu</option>
-            <option>Egalité</option>
+            <select name="resultatMatch" id="comboResultat">
+                <option value="<?php echo $_GET['resultatMatch'];?>" disabled selected><?php echo $_GET['resultatMatch'];?></option>
+                <option>Gagné</option>
+                <option>Perdu</option>
+                <option>Egalité</option>
             </select><br/>
 
             <div class="buttons">

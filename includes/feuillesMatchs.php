@@ -23,7 +23,6 @@
             <form action="../php/inscriptionJoueurMatch.php" method="post">
                 <label for="comboMatch">Matchs :</label>
 
-                <!-- Interdire de sélectionner un joueur en tant que titulaire ET remplacant -->
                 <select name="matchs" id="comboMatch">
                     <option value="" disabled selected>--Choisissez un match--</option>
                     <?php

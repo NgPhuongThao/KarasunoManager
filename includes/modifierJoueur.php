@@ -24,20 +24,20 @@
             <label>Poids : </label>
             <input type="number" name="poids" value="<?php echo $_GET['poids'];?>" required><br/>
             <label for="comboPoste">Poste préféré :</label>
-            <select name="postePrefere" id="comboPoste" value="<?php echo $_GET['postePrefere'];?>" required>
-            <option disabled selected>--Choisissez un poste--</option>
-            <option>Attaquant</option>
-            <option>Central</option>
-            <option>Libéro</option>
-            <option>Passeur</option>
+            <select name="postePrefere" id="comboPoste" required>
+                <option value="<?php echo $_GET['postePrefere'];?>" disabled selected><?php echo $_GET['postePrefere'];?>-</option>
+                <option>Attaquant</option>
+                <option>Central</option>
+                <option>Libéro</option>
+                <option>Passeur</option>
             </select><br/>
             <label for="comboStatut">Statut :</label>
-            <select name="statut" id="comboStatut" value="<?php echo $_GET['statut'];?>" required>
-            <option disabled selected>--Choisissez un statut--</option>
-            <option>Actif(ve)</option>
-            <option>Blessé(e)</option>
-            <option>Suspendu(e)</option>
-            <option>Absent(e)</option>
+            <select name="statut" id="comboStatut" required>
+                <option value="<?php echo $_GET['statut'];?>" disabled selected><?php echo $_GET['statut'];?></option>
+                <option>Actif(ve)</option>
+                <option>Blessé(e)</option>
+                <option>Suspendu(e)</option>
+                <option>Absent(e)</option>
             </select><br/>
             <label for="commentaire">Commentaire : </label>
             <textarea id="commantaire" name="commentaire" value="<?php echo $_GET['commentaire'];?>"></textarea><br/>
