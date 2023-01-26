@@ -61,6 +61,7 @@ table{
     border-collapse: collapse;
     margin : auto;
     text-align: center;
+    width: 1150px;
 }
 
 th, td{
