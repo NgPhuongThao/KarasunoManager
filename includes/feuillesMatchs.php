@@ -19,30 +19,43 @@
     <main>
         <div class="gestion">
             <h1>Feuilles de match</h1>
+            <form action="../php/inscriptionJoueurMatch.php" method="post">
+                <label for="comboMatch">Matchs :</label>
 
-            <label for="comboMatch">Matchs :</label>
+                <!-- Interdire de sélectionner un joueur en tant que titulaire ET remplacant -->
+                <select name="matchs" id="comboMatch">
+                    <option value="" disabled selected>--Choisissez un match--</option>
+                    <?php
+                        require_once('../php/connexionBD.php');
+                        $linkpdo = connexion();
+                        $res = $linkpdo->prepare("SELECT IdMatch, NomAdversaire, DateMatch, Heure FROM matchdispute WHERE RESULTAT IS NULL");
+                        $res->execute();
+                        foreach ($res as $row) {
+                            echo "<option value='".$row['IdMatch']."'>".$row['NomAdversaire'].", ".$row['DateMatch']." ".$row['Heure']."</option>";
+                        }
+                        deconnexion($linkpdo);
+                    ?>
+                </select>
 
-            <select name="matchs" id="comboMatch">
-                <option value="">--Choisissez un match--</option>
-            </select>
+                <table>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Taille</th>
+                        <th>Poids</th>
+                        <th>Poste préféré</th>
+                        <th>Commentaire</th>
+                        <!--<th>Evaluation</th>--> <!--Jsp où c'est trouvable-->
+                        <th>Titulaire</th>
+                        <th>Remplaçant</th>
+                    </tr>
+                    <?php include('../php/feuilles.php'); ?>
+                </table>
 
-            <table>
-                <tr>
-                    <th>Photo</th>
-                    <th>Taille</th>
-                    <th>Poids</th>
-                    <th>Poste préféré</th>
-                    <th>Commentaire</th>
-                    <!--<th>Evaluation</th>--> <!--Jsp où c'est trouvable-->
-                    <th>Titulaire</th>
-                    <th>Remplaçant</th>
-                </tr>
-                <?php include('../php/feuilles.php'); ?>
-            </table>
-
-            <div class="buttons">
-                <input type="submit" value="Valider" onclick=""> <!--Ajouter dans le onclick un moyen de dire que ça a bien été validé-->
-            </div>
+                <div class="buttons">
+                    <!-- Activer/désactiver le bouton si il n'y a pas 6 équipes sélectionnées -->
+                    <input type="submit" name="valider" value="Valider" onclick=""> <!--Ajouter dans le onclick un moyen de dire que ça a bien été validé-->
+                </div>
+            </form>
         </div>
     </main>
 </body>

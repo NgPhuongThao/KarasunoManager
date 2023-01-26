@@ -15,8 +15,8 @@
             <td>' . $row['Poids'] . '</td>
             <td>' . $row['PostePrefere'] . '</td>
             <td>' . $row['Commentaire'] . '</td>
-            <td><input type="checkbox" name="titulaire"></td>
-            <td><input type="checkbox" name="titulaire"></td>
+            <td><input type="checkbox" name="titulaire[]" value="' . $row["NumLicence"] . '"></td>
+            <td><input type="checkbox" name="remplacant[]" value="' . $row["NumLicence"] . '"></td>
             </tr>';
         }
     }
