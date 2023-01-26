@@ -36,8 +36,7 @@
 
             <div class="buttons">
                 <input type="submit" value="Valider" name="valider">
-                <input type="reset" value="Annuler" onclick="window.open('gestionJoueurs.php','wclose',
-                'width=700,height=800, toolbar=si, scroolbar=si, status=si,left=500,top=50');return false;">
+                <input type="reset" value="Annuler">
             </div>
         </form>
     </div>

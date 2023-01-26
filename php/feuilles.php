@@ -5,7 +5,7 @@
     $linkpdo = connexion();
     
     // CREATION DE LA TABLE DE JOUEURS //
-    $req = "SELECT * FROM joueur WHERE Statut = 'actif(ve)'";
+    $req = "SELECT * FROM joueur WHERE Statut = 'actif(ve)'"; //SELECT * FROM joueur, participer WHERE Statut = 'actif(ve)' AND participer.IdJoueur = joueur.NumLicence mais ça marche pas quand ya pas d'évaluation
     $res = $linkpdo->prepare($req);
     $res->execute(); 
     if ($res !== false) {
