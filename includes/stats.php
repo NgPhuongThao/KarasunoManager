@@ -47,7 +47,7 @@
                     <th>Nombre de sélections titulaire</th>
                     <th>Nombre de sélections remplaçant</th>
                     <th>Moyenne des évaluations</th>
-                    <!--<th>Pourcentage de matchs gagnés</th>-->
+                    <th>Pourcentage de matchs gagnés</th>
                 </tr>
                 <?php include('../php/stats.php'); ?>
             </table>
