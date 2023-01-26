@@ -32,15 +32,17 @@
 
             // Calcul le pourcentage de matchs gagnés
             $resMatchGagne = $linkpdo->prepare("SELECT count(*) as MatchGagne FROM participer, matchDispute
-            WHERE matchDispute.resultat = 'Gagné' AND IdJoueur = " . $row['NumLicence']);
+            WHERE matchDispute.resultat = 'Gagné' AND matchDispute.IdMatch = participer.IdMatch AND IdJoueur = " . $row['NumLicence']);
             $resMatchGagne->execute();
+            $matchsGagnes = $resMatchGagne->fetch(PDO::FETCH_ASSOC)['MatchGagne'];
 
             $resMatchs = $linkpdo->prepare("SELECT count(*) as MatchGagne FROM participer WHERE IdJoueur = " . $row['NumLicence']);
             $resMatchs->execute();
             $nbMatchs = $resMatchs->fetch(PDO::FETCH_ASSOC)['MatchGagne'];
+
             $pourcentageMatchsGagnes = 0;
             if ($nbMatchs != 0) {
-                $pourcentageMatchsGagnes = $resMatchGagne->fetch(PDO::FETCH_ASSOC)['MatchGagne'] / $nbMatchs * 100;
+                $pourcentageMatchsGagnes = ($matchsGagnes / $nbMatchs) * 100;
             }
 
             // Ajoute la ligne du tableau
