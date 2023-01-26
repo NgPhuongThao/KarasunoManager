@@ -14,6 +14,7 @@
             <li><a href="gestionMatchs.php">Gestion des matchs</a></li>
             <li><a href="feuillesMatchs.php">Feuilles de matchs</a></li>
             <li><a href="stats.php">Statistiques</a></li>
+            <li><a href="accueil.php">Déconnexion</a></li>
         </ul>
     </header>
     <main>

@@ -14,6 +14,7 @@
             <li><a href="gestionMatchs.php">Gestion des matchs</a></li>
             <li><a href="feuillesMatchs.php">Feuilles de matchs</a></li>
             <li><a href="stats.php">Statistiques</a></li>
+            <li><a href="accueil.php">Déconnexion</a></li>
         </ul>
     </header>
     <main>
@@ -23,10 +24,14 @@
                 <?php
                     require_once('../php/connexionBD.php');
                     $linkpdo = connexion();
-                    $res = $linkpdo->prepare("SELECT COUNT(*) as test FROM MatchDispute");
+                    $res = $linkpdo->prepare("SELECT COUNT(*) as test FROM MatchDispute WHERE Resultat IS NOT NULL");
                     $res->execute();
                     foreach ($res as $row) {
-                        echo "Sur " .$row['test']." matchs :";
+                        if ($row['test'] == 1){
+                            echo "Sur 1 match :";
+                        } else {
+                            echo "Sur " .$row['test']." matchs :";
+                        }
                     }
                     deconnexion($linkpdo);
                 ?>
