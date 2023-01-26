@@ -36,7 +36,7 @@
                         deconnexion($linkpdo);
                     ?>
                 </select>
-
+                
                 <table>
                     <tr>
                         <th>Photo</th>
@@ -55,6 +55,7 @@
                     <!-- Activer/désactiver le bouton si il n'y a pas 6 équipes sélectionnées -->
                     <input type="submit" name="valider" value="Valider" onclick=""> <!--Ajouter dans le onclick un moyen de dire que ça a bien été validé-->
                 </div>
+
             </form>
         </div>
     </main>

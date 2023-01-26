@@ -1,9 +1,12 @@
 <?php
     require_once("connexionBD.php");
-    header("Location: ../includes/feuillesMatchs.php");
     // Si le bouton est cliqué et le match selectionné
     if (isset($_POST["valider"]) && isset($_POST["matchs"])) {
+        header("Location: ../includes/feuillesMatchs.php");
         $linkpdo = connexion(); 
+
+        $req = "DELETE FROM participer WHERE IdMatch = " . $_POST["matchs"];
+        $linkpdo->query($req);
 
         // Insère les titulaires
         foreach ($_POST['titulaire'] as $selected) {
