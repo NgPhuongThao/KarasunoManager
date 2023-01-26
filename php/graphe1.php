@@ -10,9 +10,9 @@ require_once('connexionBD.php');
 
 $linkpdo = connexion();
 
-$req1 = "SELECT count(resultat) as gagne FROM matchdispute where resultat = 1";
-$req2 = "SELECT count(resultat) as perdu FROM matchdispute where resultat = 0";
-$req3 = "SELECT count(resultat) as nul FROM matchdispute where resultat = 2";
+$req1 = "SELECT count(resultat) as gagne FROM matchdispute where resultat = 'Gagné'";
+$req2 = "SELECT count(resultat) as perdu FROM matchdispute where resultat = 'Perdu'";
+$req3 = "SELECT count(resultat) as nul FROM matchdispute where resultat = 'Egalité'";
 
 $res1 = $linkpdo->prepare($req1);
 $res1->execute();
@@ -24,8 +24,9 @@ $res3 = $linkpdo->prepare($req3);
 $res3->execute();
 
 if (($res1 !== false) && ($res2 !== false)) {
-    $gagne = 0;
-    $perdu = 1;
+    $gagne = "Gagné";
+    $perdu = "Perdu";
+    $nul = "Egalité";
     foreach ($res1 as $row1) {
         $gagne = $row1["gagne"];
     }

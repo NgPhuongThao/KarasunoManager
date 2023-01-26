@@ -18,10 +18,21 @@
     </header>
     <main>
         <div class="gestion">
-            <h3>Sur (nombre de matchs) matchs :</h3>
+            <h1>Statistiques</h1>
+            <h3>
+                <?php
+                    require_once('../php/connexionBD.php');
+                    $linkpdo = connexion();
+                    $res = $linkpdo->prepare("SELECT COUNT(*) as test FROM MatchDispute");
+                    $res->execute();
+                    foreach ($res as $row) {
+                        echo "Sur " .$row['test']." matchs :";
+                    }
+                    deconnexion($linkpdo);
+                ?>
+            </h3>
             <?php echo "<img src='../php/graphe1.php' class='graphique'/>"; ?>
-            <p> Bleu : gagné </p>
-            <p> Rouge : perdu </p>
+            <p> Bleu : gagné / Rouge : perdu / Gris : égalité </p>
 
             <table>
                 <tr>
@@ -39,3 +50,4 @@
     </main>
 </body>
 </html>
+
